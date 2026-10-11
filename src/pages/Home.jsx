@@ -15,7 +15,7 @@ function Home() {
       <section className="home-hero">
         <img
           className="home-hero-image"
-          src="/images/beyaynetu.jpg"
+          src={`${import.meta.env.BASE_URL}images/beyaynetu.jpg`}
           alt="Traditional Ethiopian food served with injera"
         />
 
@@ -91,7 +91,10 @@ function Home() {
           {signatureDishes.map((dish) => (
             <article className="signature-card" key={dish.id}>
               <Link to={`/menu/${dish.id}`} className="signature-image-link">
-                <img src={dish.image} alt={dish.name} />
+                <img
+                  src={`${import.meta.env.BASE_URL}${dish.image.replace(/^\//, "")}`}
+                  alt={dish.name}
+                />
               </Link>
 
               <div className="signature-card-content">
@@ -128,7 +131,10 @@ function Home() {
           {featuredDishes.map((dish) => (
             <article className="home-menu-card" key={dish.id}>
               <Link to={`/menu/${dish.id}`} className="home-menu-image">
-                <img src={dish.image} alt={dish.name} />
+                <img
+                  src={`${import.meta.env.BASE_URL}${dish.image.replace(/^\//, "")}`}
+                  alt={dish.name}
+                />
               </Link>
 
               <div className="home-menu-card-content">
@@ -160,7 +166,7 @@ function Home() {
       <section className="experience-section" id="experience">
         <div className="experience-image">
           <img
-            src="/images/buna.jpg"
+            src={`${import.meta.env.BASE_URL}images/buna.jpg`}
             alt="Traditional Ethiopian coffee"
           />
         </div>
