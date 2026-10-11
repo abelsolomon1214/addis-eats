@@ -801,7 +801,7 @@ textarea:focus-visible {
   color: #ffffff;
   background:
     linear-gradient(rgb(40 30 24 / 72%), rgb(40 30 24 / 72%)),
-    url("/addis-eats/images/tibs.jpg") center / cover;
+    url("/images/tibs.jpg") center / cover;
 }
 
 .addis-content {
