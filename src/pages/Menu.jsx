@@ -33,9 +33,12 @@ function Menu() {
       setError("");
 
       try {
-        const response = await fetch("/data/dishes.json", {
-          signal: controller.signal,
-        });
+        const response = await fetch(
+          `${import.meta.env.BASE_URL}data/dishes.json`,
+          {
+            signal: controller.signal,
+          }
+        );
 
         if (!response.ok) {
           throw new Error("We could not load the menu.");
@@ -185,11 +188,7 @@ function Menu() {
           title={selectedDish.name}
           onClose={handleCloseModal}
         >
-          <img
-            src={selectedDish.image}
-            alt=""
-            className="modal-dish-image"
-          />
+     
 
           <p>{selectedDish.description}</p>
 

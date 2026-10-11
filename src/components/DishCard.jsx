@@ -14,7 +14,10 @@ function DishCard({ dish, onAddToCart, onQuickView }) {
   }
   return (
     <article className="dish-card">
-      <img src={dish.image} alt={dish.name} />
+      <img
+        src={`${import.meta.env.BASE_URL}${dish.image.replace(/^\//, "")}`}
+        alt={dish.name}
+      />
 
       <div className="dish-card-content">
         <h3>{dish.name}</h3>
