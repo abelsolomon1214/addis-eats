@@ -45,7 +45,10 @@ function Cart() {
 
           return (
             <article className="cart-item" key={item.id}>
-              <img src={item.image} alt={item.name} />
+              <img
+                src={`${import.meta.env.BASE_URL}${item.image.replace(/^\//, "")}`}
+                alt={item.name}
+              />
 
               <div className="cart-item-details">
                 <div>
